@@ -519,3 +519,121 @@ section.alt .service { background: var(--paper); border-color: transparent; }
 .lost h1 { font-size: 72px; margin: 0; color: var(--coral); }
 
 .lost p { color: #c3c5d4; margin: 8px 0 28px; }
+
+/* ---------- Web products (VoxVASuite) ---------- */
+.work + .work { margin-top: 24px; }
+
+.work .app-head .app-icon-svg { width: 72px; height: 72px; border-radius: 18px; }
+
+/* Desktop screenshot in a simple browser frame */
+.browser {
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--navy-2);
+  border: 1px solid #2b2e45;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+}
+
+.browser::before {
+  content: "";
+  display: block;
+  height: 26px;
+  background:
+    radial-gradient(circle at 16px 13px, #4a4d60 4px, transparent 5px),
+    radial-gradient(circle at 32px 13px, #4a4d60 4px, transparent 5px),
+    radial-gradient(circle at 48px 13px, #4a4d60 4px, transparent 5px),
+    var(--navy-3);
+}
+
+.browser img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top left; }
+
+.vox { --vox: #6366f1; --vox-light: #a5b4fc; }
+
+.work.vox .btn { background: var(--vox); }
+
+.work.vox .btn:hover { background: #4f46e5; }
+
+/* Product page hero */
+.product-hero.vox-hero {
+  background: radial-gradient(60% 70% at 10% 0%, rgba(99, 102, 241, 0.32), transparent), var(--navy);
+  color: var(--white);
+}
+
+.product-hero.vox-hero .app-icon { box-shadow: 0 8px 24px rgba(79, 70, 229, 0.45); }
+
+.product-hero.vox-hero .tagline { color: var(--vox-light); font-weight: 700; font-size: 20px; margin: 0 0 12px; }
+
+.product-hero.vox-hero p.lead { color: #c3c5d4; }
+
+.product-hero.vox-hero .btn { background: var(--vox); }
+
+.product-hero.vox-hero .btn:hover { background: #4f46e5; }
+
+.product-hero.vox-hero .btn.ghost { background: transparent; }
+
+.product-hero.vox-hero .btn.ghost:hover { background: rgba(255, 255, 255, 0.06); }
+
+.product-hero.vox-hero .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.product-hero.vox-hero .note { color: var(--mist); }
+
+/* Module cards */
+.modules { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+.module { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; }
+
+.module .m-icon { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; margin-bottom: 14px; }
+
+.module .m-icon svg { width: 22px; height: 22px; }
+
+.module h3 { margin: 0 0 4px; font-size: 19px; }
+
+.module .m-sum { margin: 0 0 12px; color: var(--ink-2); font-size: 16px; }
+
+.module ul { margin: 0; padding: 0; list-style: none; }
+
+.module li { position: relative; padding-left: 20px; margin: 4px 0; color: var(--ink-2); font-size: 15px; }
+
+.module li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.62em;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 8px solid var(--coral);
+}
+
+.module.included { border-style: dashed; border-color: #c7d2fe; background: #f5f6ff; }
+
+.module .pill { display: inline-block; margin-left: 6px; padding: 2px 8px; border-radius: 999px; background: #dcfce7; color: #166534; font-size: 12px; font-weight: 700; vertical-align: middle; }
+
+@media (max-width: 960px) { .modules { grid-template-columns: repeat(2, 1fr); } }
+
+@media (max-width: 640px) { .modules { grid-template-columns: 1fr; } }
+
+/* Screenshot gallery for web apps */
+.gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+
+.gallery figure { margin: 0; }
+
+.gallery figcaption { margin-top: 12px; color: var(--ink-2); font-size: 15px; }
+
+.gallery figcaption b { color: var(--ink); }
+
+.gallery .browser { box-shadow: 0 14px 30px rgba(14, 15, 26, 0.12); border-color: var(--line); }
+
+@media (max-width: 760px) { .gallery { grid-template-columns: 1fr; } }
+
+/* Plans */
+.plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+.plans div { background: var(--navy-2); border: 1px solid var(--navy-3); border-radius: var(--radius); padding: 26px; }
+
+.plans h3 { margin: 0 0 6px; font-size: 19px; }
+
+.plans p { margin: 0; color: #c3c5d4; font-size: 16px; }
+
+.plans .featured { border-color: #6366f1; box-shadow: inset 0 0 0 1px #6366f1; }
+
+@media (max-width: 860px) { .plans { grid-template-columns: 1fr; } }
