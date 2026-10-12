@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Get Stack the Cats | JCAN Studios</title>
+  <meta name="description" content="Stack the Cats: a free cozy stacking game. Tap to drop, balance the tower. How high can you stack?">
+  <meta name="theme-color" content="#fdebd3">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jcanstudios.github.io/stack-the-cats/get/">
+  <meta property="og:title" content="Stack the Cats: how high can you stack?">
+  <meta property="og:description" content="A free cozy cat-stacking game. Tap, drop, balance, and beat your friends' towers.">
+  <meta property="og:image" content="https://jcanstudios.github.io/assets/stack-the-cats-og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <script>
+    // Shared posters link here. Phones go straight to their store; anyone
+    // else (or an iPhone before the App Store version exists) sees the page.
+    (function () {
+      var PLAY = 'https://play.google.com/store/apps/details?id=com.jcanstudios.stackthecats' +
+        '&referrer=utm_source%3Dshare%26utm_medium%3Dposter';
+      // Set when the iPhone version is on the App Store, e.g.
+      // 'https://apps.apple.com/app/id0000000000'
+      var APP_STORE = null;
+      var ua = navigator.userAgent || '';
+      var iOS = /iPhone|iPad|iPod/i.test(ua) ||
+        (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      if (/Android/i.test(ua)) { location.replace(PLAY); return; }
+      if (iOS && APP_STORE) { location.replace(APP_STORE); return; }
+      window.STC_IOS = iOS;
+    })();
+  </script>
+  <style>
+    :root { --brown: #5b3a29; --muted: #8a6a55; --coral: #e76f51; --cream: #fdebd3; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      color: var(--brown);
+      background: radial-gradient(circle at 50% 30%, #fff8ee 0%, #ffd6ae 100%);
+    }
+    .card {
+      width: 100%; max-width: 420px; text-align: center; background: #fff;
+      border: 3px solid #3b2416; border-radius: 28px; padding: 32px 24px 24px;
+      box-shadow: 0 6px 0 rgba(59, 36, 22, 0.25);
+    }
+    .icon { width: 112px; height: 112px; border-radius: 26px; border: 3px solid #3b2416; }
+    h1 { margin: 16px 0 6px; font-size: 32px; letter-spacing: -0.5px; }
+    p { margin: 0 0 22px; color: var(--muted); font-size: 17px; }
+    .store {
+      display: block; padding: 15px 18px; margin-top: 12px; border-radius: 16px;
+      font-weight: 800; font-size: 17px; text-decoration: none;
+      border: 3px solid #3b2416;
+    }
+    .play { background: var(--coral); color: #fff; }
+    .apple { background: #f3eee9; color: var(--muted); cursor: default; }
+    .apple small { display: block; font-weight: 600; font-size: 13px; }
+    .note { margin-top: 18px; font-size: 13px; color: var(--muted); }
+    .ios-msg { display: none; margin: -8px 0 18px; font-weight: 700; color: var(--coral); }
+    body.ios .ios-msg { display: block; }
+    a.home { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <img class="icon" src="../../assets/stack-the-cats-icon.png" alt="Stack the Cats" width="112" height="112">
+    <h1>Stack the Cats</h1>
+    <p>Tap, drop, balance. How high can you stack?</p>
+    <div class="ios-msg">The iPhone version is on its way!</div>
+    <a class="store play" href="https://play.google.com/store/apps/details?id=com.jcanstudios.stackthecats&amp;referrer=utm_source%3Dshare%26utm_medium%3Dposter">Get it on Google Play</a>
+    <span class="store apple" aria-disabled="true">App Store<small>Coming soon for iPhone and iPad</small></span>
+    <div class="note">Free to play · No in-app purchases · <a class="home" href="../">More about the game</a></div>
+  </main>
+  <script>
+    if (window.STC_IOS) document.body.classList.add('ios');
+  </script>
+</body>
+</html>
